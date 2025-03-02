@@ -237,16 +237,19 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+ width: 100%;
   padding: 40px 15px;
   padding-inline-start: 40px;
   z-index: 4;
+ height: 100px;
+  
 }
 
 .header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: -75px;
 }
 
 .logo img { width: 175px; }
@@ -561,7 +564,72 @@ body {
   font-size: var(--fs-6);
 }
 
+.contact-section {
+  padding: var(--section-padding) 0;
+  background-color: var(--light-gray);
+  text-align: center;
+}
 
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  position: relative; /* Asegurar que no haya elementos superpuestos */
+  z-index: 1; /* Asegurar que el formulario esté en el frente */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--ff-chakra-petch);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  margin-bottom: 8px;
+  color: var(--eerie-black);
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: var(--fs-5);
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+  transition: var(--transition);
+  background-color: var(--white); /* Asegurar que el fondo sea blanco */
+  z-index: 2; /* Asegurar que los campos de entrada estén en el frente */
+}
+
+.form-input:focus {
+  border-color: var(--international-orange-engineering);
+  outline: none;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: var (--international-orange-engineering);
+  color: var(--white);
+  font-family: var(--ff-chakra-petch);
+  font-weight: var(--fw-600);
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary:is(:hover, :focus-visible) {
+  background-color: var(--oxford-blue-3);
+  transform: translateY(-5px);
+}
 
   .hero .section-text { font-size: rem; }
 
