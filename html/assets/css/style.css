@@ -491,9 +491,24 @@ body {
   #FOOTER
 \*-----------------------------------*/
 
-.footer { color: var(--cadet-blue-creyola); 
-background-image: url("images/cocheGris.png");
-  }
+.footer {
+  color: var(--cadet-blue-creyola);
+  background-image: url("./assets/images/cocheGris.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+ 
+}
+
+.footer-top, .footer-bottom {
+  position: relative;
+  z-index: 2;
+
+}
 
 .footer .shape { display: none; }
 
@@ -502,6 +517,7 @@ background-image: url("images/cocheGris.png");
 .footer-top .container {
   display: grid;
   gap: 40px;
+  
 }
 
 .footer-text { margin-block: 18px 20px; }
@@ -560,10 +576,7 @@ background-image: url("images/cocheGris.png");
   font-size: var(--fs-6);
 }
 
-.footer-pic{
-  size: 100%;
 
-}
 
 @media (min-width: 768px) {
 
@@ -612,6 +625,12 @@ background-image: url("images/cocheGris.png");
    
 
     }
+
+
+  .footer-pic{
+    size: 100%;
+
+  }
 }
 
 
