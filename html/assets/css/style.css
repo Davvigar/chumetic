@@ -17,8 +17,8 @@
   --ff-chakra-petch: 'Chakra Petch', sans-serif; /* Fuente Chakra Petch */
   --ff-mulish: 'Mulish', sans-serif; /* Fuente Mulish */
   
-  --fs-1: 3.5rem; /* Tamaño de fuente 1 */
-  --fs-2: 3rem; /* Tamaño de fuente 2 */
+  --fs-1: 5rem; /* Tamaño de fuente 1 */
+  --fs-2: 4.5rem; /* Tamaño de fuente 2 */
   --fs-3: 2.4rem; /* Tamaño de fuente 3 */
   --fs-4: 1.8rem; /* Tamaño de fuente 4 */
   --fs-5: 1.4rem; /* Tamaño de fuente 5 */
@@ -120,7 +120,8 @@ body {
 .has-bg-image {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left; /* Imagen de fondo que cubre */
+  background-position: left; 
+  font-size: 2.5rem;
 }
 
 .section-subtitle {
@@ -226,7 +227,7 @@ body {
 .img-cover {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
 }
 
 .has-scrollbar {
@@ -310,14 +311,16 @@ body {
   position: absolute;
   top: 100px;
   right: 30px;
-  background-color: var(--international-orange-engineering);
+  background-color: var(--white); /* Cambiado de --international-orange-engineering a --white */
   min-width: max-content;
-  width: 30%;
+  width: 200px; /* Cambiado de 30% a un valor fijo más pequeño */
   transform: translateY(20px);
   opacity: 0;
   visibility: hidden;
   transition: 0.25s var(--cubic-out);
   z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agregado sombra sutil */
+  border-radius: 4px; /* Agregado bordes redondeados */
 }
 
 .navbar.active {
@@ -331,14 +334,14 @@ body {
   font-family: var(--ff-chakra-petch);
   font-size: var(--fs-5);
   text-transform: uppercase;
-  color: var(--white);
-  padding: 10px 20px;
+  color: var(--international-orange-engineering); /* Cambiado de --white a --international-orange-engineering */
+  padding: 8px 16px; /* Reducido el padding horizontal */
   transition: var(--transition);
 }
 
 .navbar-link:is(:hover, :focus-visible) {
-  background-color: var(--white);
-  color: var(--international-orange-engineering);
+  background-color: var(--international-orange-engineering); /* Invertidos los colores del hover */
+  color: var(--white);
 }
 
 /*-----------------------------------*\
@@ -375,6 +378,15 @@ body {
   right: 0;
   width: 90%;
   z-index: -1;
+}
+
+.hero .section-subtitle {
+  font-size: 2rem; /* Más grande que el valor por defecto */
+}
+
+.hero .section-title {
+  margin-block: 1rem;
+  line-height: 1.2;
 }
 
 /*-----------------------------------*\
@@ -468,7 +480,7 @@ body {
 .work-card .card-subtitle {
   font-family: var(--ff-chakra-petch);
   text-transform: uppercase;
-  color: var(--international-orange-engineering);
+  color: var (--international-orange-engineering);
   font-weight: var(--fw-700);
   margin-block-end: 5px;
 }
@@ -495,10 +507,10 @@ body {
   color: var(--cadet-blue-creyola);
   .footer {
     position: relative;
-    background-image: url('/assets/css/c'); /* Ruta de la imagen */
-    background-size: contain; /* Ajusta la imagen sin cambiar el tamaño del footer */
-    background-position: center bottom; /* Centrada en la parte inferior */
-    background-repeat: no-repeat; /* Evita que se repita */
+    background-image: url('/html/assets/css/cocheGris.png'); 
+    background-size: contain; 
+    background-position: center bottom; 
+   
     z-index: 1;
   }
   
@@ -515,30 +527,37 @@ body {
   
 
 }
-.footer-top section{
-  background-image: url("cocheGris.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  padding: 0;
-  margin: 0;
-  z-index: 1;
-}
+
+
 
 .footer-top, .footer-bottom {
   position: relative;
   z-index: 2;
 }
 
-.footer .shape { display: none; }
-
 .footer-top { background-color: var(--space-cadet); }
 
 .footer-top .container {
-  display: grid;
-  gap: 40px;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;
+  gap: 50px; /* Espacio entre los elementos */
+}
+
+.footer-list {
+  margin: 0; /* Eliminar márgenes adicionales */
+  padding-right: 1000px; /* Espacio adicional a la derecha */
+ 
+}
+
+.footer-brand {
+  margin: 0; /* Eliminar márgenes adicionales */
+  padding-bottom: 50px;
   
+}
+
+.footer-list {
+  margin-right: auto; /* Mover la lista de contacto a la izquierda */
 }
 
 .footer-text { margin-block: 18px 20px; }
@@ -590,11 +609,18 @@ body {
 .footer-bottom {
   background-color: var(--oxford-blue-1);
   padding-block: 20px;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  text-align: center; /* Asegurar que el texto esté centrado */
+  
 }
 
 .copyright {
   text-align: center;
   font-size: var(--fs-6);
+  
+  
 }
 
 
@@ -607,9 +633,10 @@ body {
   .hero-content {
     max-width: 520px;
     margin-inline: auto;
+   
   }
 
-  .hero .section-text { font-size: 1.8rem; }
+  .hero .section-text { font-size: rem; }
 
   /* SERVICE */
   .service .section-title { margin-block-end: 30px; }
@@ -636,9 +663,13 @@ body {
   .footer-top {
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .footer-top .container { grid-template-columns: 1fr 1fr; }
+  .footer-top .container { grid-template-columns: 1fr 1fr;
+   }
 
   .footer .shape-3 {
     display: block;
