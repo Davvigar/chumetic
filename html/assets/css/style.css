@@ -280,7 +280,7 @@ body {
   align-items: center;
 }
 
-.logo img { width: 100px; } /* Tamaño del logo */
+.logo img { width: 175px; } /* Tamaño del logo */
 
 .nav-toggle-icon {
   width: 30px;
@@ -491,7 +491,9 @@ body {
   #FOOTER
 \*-----------------------------------*/
 
-.footer { color: var(--cadet-blue-creyola); }
+.footer { color: var(--cadet-blue-creyola); 
+background-image: url("images/cocheGris.png");
+  }
 
 .footer .shape { display: none; }
 
@@ -558,9 +560,10 @@ body {
   font-size: var(--fs-6);
 }
 
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/
+.footer-pic{
+  size: 100%;
+
+}
 
 @media (min-width: 768px) {
 
