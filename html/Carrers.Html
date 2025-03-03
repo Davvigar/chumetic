@@ -8,7 +8,7 @@
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,600,0,0" />
 </head>
-<body>
+<body class="careers-page">
 
 <header class="header">
     <div class="container">
@@ -33,27 +33,49 @@
 </header>
 
 <main>
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="h2 section-title">Contact Us</h2>
-            <form action="#" method="post" class="contact-form">
-                <div class="form-group">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" id="name" name="name" class="form-input" required>
-                </div>
-                <div class="form-group">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" name="email" class="form-input" required>
-                </div>
-                <div class="form-group">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea id="message" name="message" class="form-input" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">
-                    <span class="span">Send Message</span>
-                    <span class="material-symbols-rounded">send</span>
-                </button>
-            </form>
+    <section id="carrers" class="carrers-section">
+        <div class="container careers-container">
+            
+            <div class="form-container">
+                
+                <form action="#" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cv" class="form-label">Upload your CV</label>
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="cv" name="cv" class="file-upload-input" 
+                                   accept=".pdf,.doc,.docx,.txt" required>
+                            <label for="cv" class="file-upload-button">
+                                <span class="material-symbols-rounded">upload_file</span>
+                                Choose File
+                            </label>
+                            <span class="file-name">No file chosen</span>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <span class="span">Send </span>
+                        <span class="material-symbols-rounded">send</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="careers-text">
+                <h2>Join our team</h2>
+                <p>
+                    OUR PEOPLE ARE PASSIONATE, RESTLESS, ALL-ROUNDER, MOTIVATED, DYNAMIC, WITH SOMETHING DIFFERENT TO CONTRIBUTE. THEY PUT EFFORT INTO EVERYTHING THEY DO, THEY ARE CREATIVE, UNSTOPPABLE, INGENIOUS AND PROACTIVE.</p>
+            </div>
+
+            <div class="logo-wall-container">
+                <img src="/html/assets/images/lgoo en pared.png" alt="Logo on wall" class="logo-wall">
+            </div>
         </div>
     </section>
 </main>
