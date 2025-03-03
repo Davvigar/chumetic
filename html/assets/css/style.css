@@ -321,15 +321,18 @@ body {
 
 .hero {
   position: relative;
-  padding-block-start: calc(var(--section-padding) + 70px);
+  padding-block-start: calc(var(--section-padding) - 40px); /* Reducido de +10px a -40px */
   text-align: center;
   z-index: 1;
   overflow: hidden;
+  height: 10%;
 }
 
 .hero .container {
   display: grid;
-  gap: 30px;
+  gap: 20px; /* Reducido de 30px a 20px */
+  padding-block: 20px; /* Reducido de 40px a 20px */
+  height: 40%;
 }
 
 .hero .section-subtitle { text-transform: unset; }
@@ -358,6 +361,11 @@ body {
 .hero .section-title {
   margin-block: 1rem;
   line-height: 1.2;
+}
+
+.hero-content {
+  margin-top: 10px; /* Reducido de 20px a 10px */
+  margin-bottom: 10px; /* Reducido de 20px a 10px */
 }
 
 .service-banner { display: none; }
@@ -793,4 +801,165 @@ body {
 
 .customs-card {
   transform: translateY(-33px);
+}
+
+.values {
+    padding: 60px 0;
+    background-image: url('/html/assets/images/valores.png'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajustar la imagen para cubrir toda la sección */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
+}
+
+.values h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.values-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.value-item {
+    width: 30%;
+    background-color: #fff; /* Fondo blanco completo */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.value-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.value-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Timeline Section Styles */
+.timeline {
+    padding: 80px 0;
+    max-width: 1000px; /* Aumentado de 800px a 1000px */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.timeline h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--international-orange-engineering);
+}
+
+.timeline-item {
+    max-width: 800px; /* Aumentado de 600px a 800px */
+    margin: 0 auto 40px;
+    text-align: left;
+    padding: 0 30px;
+    position: relative;
+}
+
+.timeline-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--oxford-blue-3);
+}
+
+.timeline-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--sonic-silver);
+    margin-left: 0; /* Quitado el margen izquierdo */
+}
+
+/* Eliminar los puntos rojos */
+.timeline-item::before {
+    display: none;
+}
+
+/* Team Section Styles */
+.team {
+    padding: 40px 20px;
+    background-image: url('../images/equipo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajustar la imagen para cubrir toda la sección */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
+}
+
+.team h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #fff; /* Cambiar el color del texto a blanco */
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 18%;
+    background-color: #fff; /* Fondo blanco completo */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Vision and Mission Section Styles */
+.vision-mission {
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Añadido para centrar horizontalmente */
+    text-align: center; /* Asegurar que todo el texto esté centrado */
+    margin: 0 auto; /* Centrar la sección completa */
+    max-width: 800px; /* Limitar el ancho máximo */
+}
+
+.vision-mission .container {
+    display: flex;
+    flex-direction: column; /* Cambiar a columna para apilar elementos */
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.vision-mission-text {
+    flex: 1;
+    margin: 0 auto; /* Centrar el texto */
+    max-width: 600px; /* Limitar el ancho del texto */
+}
+
+.vision-mission-text h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: var(--international-orange-engineering);
+}
+
+.vision-mission-text p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--oxford-blue-3);
 }
