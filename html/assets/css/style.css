@@ -963,3 +963,56 @@ body {
     margin-bottom: 20px;
     color: var(--oxford-blue-3);
 }
+
+.hero-content .cta-button {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+
+/* Estilo para la sección de imágenes */
+.image-section {
+  background-color: white; /* Fondo blanco */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.image-section .container {
+  flex: 1 1 calc(45% - 20px); /* Ajusta el tamaño de los contenedores */
+  max-width: calc(45% - 20px);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  text-align: center; /* Centra el texto dentro de los contenedores */
+}
+
+.image-section .container img {
+  width: 100%; /* Ajusta el ancho al 100% */
+  height: auto; /* Mantiene las proporciones */
+  display: block;
+  margin-bottom: 10px; /* Reduce el margen inferior de la imagen */
+}
+
+.image-section .container.small {
+  flex: 1 1 calc(35% - 20px); /* Ajusta el tamaño de los contenedores pequeños */
+  max-width: calc(35% - 20px);
+  margin-top: 10px; /* Ajusta el margen superior para subir los contenedores */
+}
+
+.image-section .container.small:nth-child(2) {
+  margin-top: 25px; /* Ajusta el margen superior para subir el contenedor de texto e imagen */
+}
+
+.image-section .container.small:nth-child(3) {
+  margin-top: 45px; /* Ajusta el margen superior para subir el contenedor de texto */
+}
+
+.image-section .container h1 {
+  margin-top: 5px; /* Reduce el margen superior del texto */
+}
